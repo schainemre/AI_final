@@ -1,0 +1,183 @@
+﻿{
+  "TrainingTime": 10,
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\Okan\\OneDrive\\Masaüstü\\Ders\\3\\Yapay Zeka\\final\\Odev\\Odev\\E2021new.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "HomeTeam",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "AwayTeam",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "FTHomeGol",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "FTAwayGol",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "HomeShot",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "AwayShot",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "HomeCorner",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "AwayCorner",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 0,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.075276017692991082,
+        "RuntimeInSeconds": 0.75800001621246338
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.12743782119258537,
+        "RuntimeInSeconds": 0.69499999284744263
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": -1.3069924943751008,
+        "RuntimeInSeconds": 0.61799997091293335
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": -1.2826207434113548,
+        "RuntimeInSeconds": 0.68699997663497925
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.12310586621073101,
+        "RuntimeInSeconds": 0.74000000953674316
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaRegression",
+        "Score": 0.14353609955247337,
+        "RuntimeInSeconds": 0.82899999618530273
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.13937722024353513,
+        "RuntimeInSeconds": 0.56800001859664917
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.18133964579138223,
+        "RuntimeInSeconds": 0.78799998760223389
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.075276017692991082,
+        "RuntimeInSeconds": 0.79500001668930054
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": -1.4026140340580047,
+        "RuntimeInSeconds": 0.7160000205039978
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeTweedieRegression",
+        "Score": -1.5639278377947694,
+        "RuntimeInSeconds": 0.75599998235702515
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaRegression",
+        "Score": 0.14019340744496608,
+        "RuntimeInSeconds": 1.3619999885559082
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.12068712085316187,
+        "RuntimeInSeconds": 0.8190000057220459
+      }
+    ],
+    "Pipeline": "{\"parameter\":{\r\n  \"0\": {\r\n    \"OutputColumnNames\": [\r\n      \"FTHomeGol\",\r\n      \"FTAwayGol\",\r\n      \"HomeShot\",\r\n      \"AwayShot\",\r\n      \"HomeCorner\"\r\n    ],\r\n    \"InputColumnNames\": [\r\n      \"FTHomeGol\",\r\n      \"FTAwayGol\",\r\n      \"HomeShot\",\r\n      \"AwayShot\",\r\n      \"HomeCorner\"\r\n    ]\r\n  },\r\n  \"1\": {\r\n    \"InputColumnName\": \"HomeTeam\",\r\n    \"OutputColumnName\": \"HomeTeam\"\r\n  },\r\n  \"2\": {\r\n    \"InputColumnName\": \"AwayTeam\",\r\n    \"OutputColumnName\": \"AwayTeam\"\r\n  },\r\n  \"3\": {\r\n    \"InputColumnNames\": [\r\n      \"FTHomeGol\",\r\n      \"FTAwayGol\",\r\n      \"HomeShot\",\r\n      \"AwayShot\",\r\n      \"HomeCorner\",\r\n      \"HomeTeam\",\r\n      \"AwayTeam\"\r\n    ],\r\n    \"OutputColumnName\": \"Features\"\r\n  },\r\n  \"4\": {\r\n    \"NumberOfLeaves\": 4,\r\n    \"MinimumExampleCountPerLeaf\": 20,\r\n    \"LearningRate\": 0.22073206171919366,\r\n    \"NumberOfTrees\": 10,\r\n    \"SubsampleFraction\": 0.67900802351230838,\r\n    \"MaximumBinCountPerFeature\": 236,\r\n    \"FeatureFraction\": 0.99999999,\r\n    \"L1Regularization\": 2E-10,\r\n    \"L2Regularization\": 0.050283570802191313,\r\n    \"LabelColumnName\": \"AwayCorner\",\r\n    \"FeatureColumnName\": \"Features\"\r\n  }\r\n},\"estimators\":[\"ReplaceMissingValues\",\"FeaturizeText\",\"FeaturizeText\",\"Concatenate\",\"LightGbmRegression\"]}",
+    "MetricName": "RSquared"
+  },
+  "Type": "TrainingConfig",
+  "Version": 1
+}
